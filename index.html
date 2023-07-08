@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Digital Clock</h1>
+        <div class="clock">
+            <div class="date-details">
+                <div class="date-method">
+                    <span>Date</span>
+                    <span>Month</span>
+                    <span>Year</span>
+                </div>
+                <div class="date-number">
+                    <span id="date"></span>
+                    <span id="month"></span>
+                    <span id="year"></span>
+                </div>
+            </div>
+            <div class="time-details">
+                <div class="time">
+                    <span>Hours</span>
+                    <span>Minutes</span>
+                    <span>Seconds</span>
+                </div>
+                <div class="time-number">
+                    <span id="hour"></span>
+                    <span id="minute"></span>
+                    <span id="second"></span>
+                </div>
+            </div>
+            <div id="days">
+                <input type="radio" class="day" id="sun">
+                <label for="sun">SUN</label>
+                <input type="radio" class="day" id="mon">
+                <label for="mon">MON</label>
+                <input type="radio" class="day" id="tue">
+                <label for="tue">TUE</label>
+                <input type="radio" class="day" id="wed">
+                <label for="wed">WED</label>
+                <input type="radio" class="day" id="thu">
+                <label for="thu">THU</label>
+                <input type="radio" class="day" id="fri">
+                <label for="fri">FRI</label>
+                <input type="radio" class="day" id="sat">
+                <label for="sat">SAT</label>
+            </div>
+            <div id="morning">
+                <input type="radio" class="detail" id="am">
+                <label for="am">AM</label>
+                <input type="radio" class="detail" id="pm">
+                <label for="pm">PM</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
