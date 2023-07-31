@@ -27,6 +27,7 @@ body {
     border-radius: 10px;
     font-weight: bold;
     padding: 0px 40px;
+    align-items: center;
 }
 
 .date-number span,
