@@ -59,20 +59,11 @@ function clock() {
         second.innerText = dates.getSeconds();
     }
 
-
-    let mon = document.getElementById('mon');
-    let tue = document.getElementById('tue');
-    let wed = document.getElementById('wed');
-    let thu = document.getElementById('thu');
-    let fri = document.getElementById('fri');
-    let sat = document.getElementById('sat');
-    let sun = document.getElementById("sun");
-
     let i = dates.getDay();
     let days = document.querySelectorAll('.day')[i].checked = true;
 
     let k;
-    if (hour < 12) {
+    if (dates.getHours() <= 12) {
         console.log('rajiii');
         k = 0;
     } else {
