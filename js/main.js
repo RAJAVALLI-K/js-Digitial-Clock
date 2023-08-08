@@ -1,20 +1,72 @@
 function clock() {
 
-    let dates = new Date();
-    let date = dates.getDate();
-    let month = dates.getMonth();
-    month = month + 1;
-    let year = dates.getFullYear();
-    let hour = dates.getHours();
-    let minute = dates.getMinutes();
-    let second = dates.getSeconds();
+    let date = document.querySelector('#date')
+    let month = document.querySelector('#month')
+    let year = document.querySelector('#year')
+    let hour = document.querySelector('#hour')
+    let minute = document.querySelector('#minute')
+    let second = document.querySelector('#second')
 
-    document.querySelector('#date').innerText = date;
-    document.querySelector('#month').innerText = month;
-    document.querySelector('#year').innerText = year;
-    document.querySelector('#hour').innerText = hour;
-    document.querySelector('#minute').innerText = minute;
-    document.querySelector('#second').innerText = second;
+    let dates = new Date();
+    date.innerText = dates.getDate();
+    month.innerText = dates.getMonth();
+    year.innerText = dates.getFullYear();
+    hour.innerText = dates.getHours();
+    minute.innerText = dates.getMinutes();
+    second.innerText = dates.getSeconds();
+    // date
+
+    if (dates.getDate() <= 9) {
+        date.innerHTML = "0" + (dates.getDate());
+    }
+    else {
+        date.innerHTML = dates.getDate();
+    }
+
+    // month
+
+    if (dates.getMonth() <= 9) {
+        month.innerText = "0" + (dates.getMonth() + 1);
+    }
+    else {
+        month.innerText = dates.getMonth() + 1;
+    }
+
+    // hour
+
+    if (dates.getHours() <= 9) {
+        hour.innerHTML = "0" + (dates.getHours());
+    }
+    else {
+        hour.innerHTML = dates.getHours();
+    }
+
+    // minutes
+
+    if (dates.getMinutes() <= 9) {
+        minute.innerHTML = "0" + (dates.getMinutes());
+    }
+    else {
+        minute.innerHTML = dates.getMinutes();
+    }
+
+    // seconds
+
+    if (dates.getSeconds() <= 9) {
+        second.innerText = "0" + (dates.getSeconds());
+    }
+    else {
+        second.innerText = dates.getSeconds();
+    }
+
+
+    let mon = document.getElementById('mon');
+    let tue = document.getElementById('tue');
+    let wed = document.getElementById('wed');
+    let thu = document.getElementById('thu');
+    let fri = document.getElementById('fri');
+    let sat = document.getElementById('sat');
+    let sun = document.getElementById("sun");
 
     let i = dates.getDay();
     let days = document.querySelectorAll('.day')[i].checked = true;
